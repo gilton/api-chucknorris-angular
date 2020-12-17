@@ -1,0 +1,23 @@
+<div>
+    <table border="1">
+        <tr style="font-weight: bold;">
+            <td>Criado em</td>
+            <td>Piada</td>
+            <td>Imagem</td>
+        </tr>
+        
+        <tr>
+            <td> 
+                {{joke.created_at | date:'dd/MM/yyyy'}} - 
+                {{joke.created_at | date:'hh:mm'}}
+            </td>
+            <td>
+                {{joke.value}}
+            </td>
+            <td>
+                <img [src]="joke.icon_url" >
+            </td>
+            
+        </tr>
+    </table>
+</div>
