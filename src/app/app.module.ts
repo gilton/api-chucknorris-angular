@@ -6,11 +6,13 @@ import { JokeService } from './services/joke.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JokesComponent } from './components/jokes/jokes.component';
+import { CountwordsPipe } from './shared/pipe/countwords.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JokesComponent
+    JokesComponent,
+    CountwordsPipe
     
   ],
   imports: [
