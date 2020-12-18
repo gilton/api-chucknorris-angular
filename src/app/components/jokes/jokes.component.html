@@ -1,32 +1,46 @@
-<div>
+<p>&nbsp;</p>
+
+<div class="main-div">
     
-    <h1>Detalhes</h1>
+    <mat-card-title>
+        Piadas sobre Chuck Norris
+        <img [src]="joke.icon_url" alt="Selo de Aprovação Chuck Norris"
+        class="selo" mat-card-avatar >
+    </mat-card-title>
+    <mat-card class="example-card">
+        
+        <mat-card-content>
+            <p>
+                {{joke.value}}
+            </p>
+        </mat-card-content>
+        
+        <mat-card-actions>    
+            
+            <div class="example-button-row nav-buttons">
+                <div class="example-flex-container">
+                  <div class="example-button-container">
+             
+                    <button mat-mini-flab color="primary" >
+                        <mat-icon class="material-icons" (click)="onBack()" >chevron_left</mat-icon>
+                    </button>
+                    <button mat-mini-flab color="primary" >
+                        <mat-icon class="material-icons" (click)="onNext()">chevron_right</mat-icon>
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+        </mat-card-actions>
+        
+    </mat-card>
+    
     
     <p>
-        <span>quantidades de letras -
+        Qtde de Letras -
+        <label for="num">
             {{joke.value | countwords}}
-        </span>
+        </label>
     </p>
-
-    <table border="1">
-        <tr style="font-weight: bold;">
-            <td>Criado em</td>
-            <td>Piada</td>
-            <td>Imagem</td>
-        </tr>
-        
-        <tr align="center">
-            <td> 
-                {{joke.created_at | date:'dd/MM/yyyy'}} - 
-                {{joke.created_at | date:'hh:mm'}}
-            </td>
-            <td>
-                {{joke.value}}
-            </td>
-            <td>
-                <img [src]="joke.icon_url" >
-            </td>
-            
-        </tr>
-    </table>
+    
 </div>

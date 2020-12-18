@@ -12,7 +12,7 @@ export class JokeService {
 
   constructor(private http:HttpClient) { }
 
-  getJokes(): Observable<Joke> {
+  getAJoke(): Observable<Joke> {
     return this.http.get<Joke>(apiURL + "/jokes/random");
   }
 

@@ -7,6 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JokesComponent } from './components/jokes/jokes.component';
 import { CountwordsPipe } from './shared/pipe/countwords.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//MATERIAL
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -18,8 +27,16 @@ import { CountwordsPipe } from './shared/pipe/countwords.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDividerModule
   ],
+  
   providers: [JokeService],
   bootstrap: [AppComponent]
 })
